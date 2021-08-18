@@ -1,0 +1,402 @@
+/* @import url("http://itogi.net/css/reset.css"); загружать всегда с одного сайта было бы неплохо */
+@import url("/abc/app/publishercsvtotxt-01/style.css");
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, 
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, 
+section, summary, time, mark, audio, video {font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;border:0;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';content:none;}
+table {border-collapse:collapse;border-spacing:0;}
+*{text-decoration:none;margin:0;padding:0;border:0;}
+
+/* теги */
+body {position:relative;color:#555555; background:#ffffff /*repeat-x url('/tms/concrete/gui/bg-body.jpg') center top*/;font:12px verdana,arial,sans-serif;text-align:center;}
+a {color:#666666;text-decoration:none;}
+a:hover {color:#C50006;} a:active {color:#ff0000;}
+b { font-weight: bold; }
+code { /*padding:5px 10px;margin:5px 0;*/line-height: 18px; }
+h2 {/*color:#144e6b;*/color:#3B362E;background:no-repeat url("/tms/concrete/gui/h2.png") 0 0;font:normal 24px verdana,Arial,sans-serif;text-transform:uppercase;margin:30px 0 5px 20px;padding:0 0 5px 40px}
+h2:before {visibility:hidden;display:block;content: " ";clear:both;height:0;font-size:0;}
+h2:after {visibility:hidden;display:block;content: " ";clear:both;height:0;font-size:0;}
+h2:first-child {margin:10px 0 5px 20px;padding:0px 0 10px 40px;}
+h3 {color:#333333;/*background:no-repeat url('/tms/concrete/gui/h2.png') left center;*/font:bold 16px verdana,Arial,sans-serif;text-transform:uppercase;margin:20px 0 15px 9px;padding:0 0 0 20px;}
+p  {display:block;line-height:1.4;padding:5px 10px;margin:5px 0;}
+ul {display:block;line-height:1.4;text-align:left;padding:0px 10px 10px 10px;margin:0;}
+ul li{list-style-type:disc;font-size:12px;margin:0 0 0 40px;}
+/*ul li:before, .cities-l>li ul li:before {display:inline-block;margin-right: 5px; content: '•';}*/
+table {font:normal 12px arsenalregular,Verdana,Arial,sans-serif;line-height:18px;padding:0 0;margin:5px 10px 15px 25px;}
+td {padding:1px 10px;margin:0;}
+
+/* структурные блоки */
+h1 {width:100%;height:30px;color:#CD3500;font:normal 30px oranienbaumregular,verdana,Arial,sans-serif;text-transform:uppercase;text-align:left;margin:-33px 0 156px 0;overflow:hidden;white-space:nowrap;}
+h1.index {margin-bottom:568px;}
+.logo {position:absolute;top:38px;left:50%;/*wt*/;margin:0 0 0 -500px;/*0,5wt*/;border:0;z-index:10;}
+/*.logo img {width:269px;height:145px;}*/
+.ct {position:absolute;top:48px;left:50%;/*wt*/height:139px;background:#ffffff url('/tms/concrete/gui/ct.png') left top;text-align:center;margin:-10px 0 -10px -500px;/*0,5wt*/padding:0 0 0 0;/*border-bottom:5px solid #4e0f20;*/z-index:3;}
+.contact{display:block;float:right;width:115px;height:60px;color:#000000;font:normal 12px arsenalregular,Verdana,Arial,sans-serif;text-align:left;margin:5px 2px 0 5px;padding:0;z-index:3;}
+/*.ct h5    {width:120px;margin:5px 0 0 0;}*/
+.ct .one  {width:215px;margin:11px 0 0 30px;}
+.ct .two  {width:120px;margin:12px 0 0 30px;}
+.ct .last {width:120px;margin:12px 8px 0 30px;}
+.nv1 {float:right;width:950px;height:24px;text-align:left;margin:20px 0 0 5px;padding:0;z-index:3;}
+.ct .nv1 a {display:block;float:right;color:#000000;font:bold 11px oranienbaumregular,Verdana,Arial,sans-serif;text-transform:uppercase;padding:5px 15px 4px 5px;margin:0 0 0 0;border-left:solid #fdfdfd 1px;/*border-right:solid #eeeeee 1px;*/}
+.ct .nv1 a:hover {color:#1C4CA1;background:#ffffff;}
+.ct .nv2 {float:right;width:750px;height:24px;/*background:#ffff00;*/text-align:left;margin:17px 0 0 5px;padding:0;z-index:3;}
+.ct .nv2 a {display:block;float:right;color:#666666;font:normal 12px oranienbaumregular,Verdana,Arial,sans-serif;text-transform:uppercase;padding:7px 15px 5px 10px;margin:0 0 0 0;border-left:solid #fdfdfd 1px;/*border-right:solid #eeeeee 1px;*/}
+.ct .nv2 a:hover {color:#ffffff;background:#3C3F3E;}
+/*.ct img {margin-top:10px;}*/
+.ch {position:absolute;top:177px;width:1000px;/*wt*/height:417px;/*wt*//*ct height*/left:50%;text-align:center;margin:0 0 0 -500px;/*0,5wt*/padding:0;/*border-bottom:1px solid #1C1C1C;*/z-index:3;}
+.cht {position:relative;height:299px;}
+.cht div {position:absolute;right:20px;bottom:10px;color:#111111;/*background:url('/tms/concrete/gui/1x1.png') left top;*/text-align:left;/* padding:10px 10px 10px 30px; */}
+.cht div p {padding:3px 10px 3px 30px;margin:0;line-height:16px;}
+.cht img {padding:4px;margin:0;border:1px solid #ffffff;}
+.chb {position:relative;height:34px;background:#2F86BE repeat-x url('/tms/concrete/gui/chb.png') left top;margin:3px 0 0 0;/*border:solid #bbbbbb 2px;border-top:solid #555 0px;*/}
+
+.rdfa {float:right;margin:25px 10px 0 0;}
+.rdfa span {color:#2e3841;font:normal 10px Verdana, Arial, sans-serif;text-transform:uppercase;padding:0px 10px;margin:0;}
+.chb a {display:block;float:right;color:#ffffff;font:bold 12px Verdana, Arial, sans-serif;text-transform:uppercase;padding:9px 30px 11px 30px;margin:0 0 0 0;border-left:solid #fdfdfd 1px;/*border-right:solid #eeeeee 1px;*/}
+.chb a:hover {color:#ffffff;background:#EE5E00;}
+.chtl {display:block;margin:26px 0 0 0px;}
+.cc {position:relative;color:#000000;background:#fdfdfd;font:normal 12px arsenalregular,Verdana,Arial,sans-serif;text-align:left;margin:10px auto;border:1px solid #ddd;z-index:1;}
+.cc:after {visibility:hidden;display:block;content: " ";clear:both;height:0;font-size:0;}
+/* * html .cc {zoom:1;} */ /* for IE6 */  /* *:first-child+html .cc {zoom:1;} */ /* for IE7 */
+.ccl {position:absolute;display:block;top:0;left:0;width:250px;min-height:100%;padding-top:15px;z-index:8;}
+.o-c-o .ccl {display:none;margin:0;}
+.ccc {position:relative;display:block;top:0;/*left:280px;*/ min-height:1000px;min-width:275px;/*background:no-repeat url('/tms/concrete/gui/ccc.png') right bottom*/;margin:0 0 0 250px;padding:10px 0 20px 0;z-index:8;}
+.o-c-o .ccc {margin:0;}
+.breadcrumbs {float:right;color:#dddddd;}
+.cf {position:relative;/* height:260px */;background:#fdfdfd url('/tms/concrete/gui/bg-hd.gif') left top;text-align:left;line-height:1.5;margin:0 auto;margin-bottom:20px;z-index:3;z-index:1;}
+.cf:after {visibility:hidden;display:block;content: " ";clear:both;height:0;font-size:0;}
+.cfl {/*background:#FFCCFF;*/float:left;width:250px;min-height:100px;padding:0;}
+.cfc {float:left;min-height:100px;padding:20px;margin-top:0px;}
+.ct h5    {width:120px;margin:5px 0 0 0;}
+.cfc .one {width:250px;margin-left:20px;margin-top:0px;}
+.cfc .two {width:170px;margin-left:20px;margin-top:0px;}
+.cfc .last {margin-right:5px;margin-top:25px;}
+.cfr {float:right;min-height:20px;padding:0;}
+.cfb {clear:both;min-height:30px;width:99%;text-align:right;padding:0 1% 0 0;}
+.cfb:before {visibility:hidden;display:block;content: " ";clear:both;height:0;font-size:0;}
+.cb {position:relative;width:100%;min-height:200px;/*background:#F3F7FA;border-top:1px solid #ddd;*/margin:-200px auto -33px;padding-bottom:20px;z-index:0;}
+.is {position:relative;margin-left:10px;margin-bottom:30px;}
+.is:before, .is:after {display:block;clear:both;visibility:hidden;height:0;font-size:0;content: " ";}
+.fla {width:1000px;height:305px;background: url('/img/fla/1000x305-01/01.jpg') left top;}
+.fll {margin-top:0px;}
+
+.c1, .c2, .c3, .c4, .c5 {position:absolute;left:0;top:0;width:100%;height:100%;background-color:transparent;} 
+.c1 {background:url('/lab/gui/default/c1.png') center center;z-index:-1;}
+.c2 {background:url('/lab/gui/default/c2.png') left top;z-index:-2;}
+.c3 {background:url('/lab/gui/default/c3.png') right top;z-index:-3;}
+.c4 {background:url('/lab/gui/default/c4.png') left bottom;z-index:-4;}
+.c5 {background:url('/lab/gui/default/c5.png') right bottom;z-index:-5;}
+
+.w11, .w21, .w31, .w41, .w51 {position:absolute;left:0;top:0;/*width:100%;height:100%;*/background-color:transparent;} 
+.w11 {/*background:#ffff00;*/top:141px;left:50%;height:32px;margin:0 0 0 -500px;/*0,5wt*/;border:0;z-index:11;}
+.w21 {display:none;z-index:21;}
+.w31 {display:none;z-index:31;}
+.w41 {display:none;z-index:41;}
+.w51 {display:none;z-index:51;}
+
+/* модификаторы ширины */
+.wt  {width:1000px;} /* ширина контейнеров, заполняющих всю ширину сайта или блока */
+.wtl {width:250px;}	/* ширина контейнеров левого и правого блока */
+/*.wtc {width:672px;}*/	/* ширина контейнеров центрального блока и отступы */
+
+/* модификаторы структуры */
+.l-c-o {background:#fdfdfd repeat-y url('/tms/concrete/gui/cc.png') left top;}
+
+/* 3 column Fixed-Fluid-Fixed */
+/* 2 column Fixed-Fluid */
+/* 2 column Fluid-Fixed */
+/* 1 column Fluid */
+
+/* border-radius структурных боков, все блоки*/
+/*
+.ct, .chb, .cc, .cf, a.a1 {-o-border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px;}
+*/
+
+/* border-radius структурных боков, выборочные блоки*/
+.cc, .cf {-o-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+
+/* box-shadow структурных боков*/
+/*
+.ct, .ch, .cc, .cf {-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);}
+*/
+/* модификаторы свойств */
+/* CSS свойства, 1 class = 1 свойство */
+/* @import url(http://itogi.net/css/mod.css); загружать всегда с одного сайта было бы неплохо */
+/* modifier */
+/* display */    .dn {display:none;} .db {display:block;} .di {display:inline;} .dib {display:inline-block;} .dt {display:table;} .dtr {display:table-row;} .dtc {display:table-cell;} .dit {display:inline-table;} .dli {display:list-item;} .dtc {display:table-caption;} .dtcg {display:table-column-group;} .dtc {display:table-column;} .dtfg {display:table-footer-group;} .dthg {display:table-header-group;} .dtrg {display:table-row-group;}
+/* position */   .pab {position:absolute;} .pr {position:relative;} .pf {position:fixed;}
+/* float */      .fl {float:left} .fr {float:right}
+/* height */     .h270 {height:270px;}.h100 {height:100px;}
+/* width */      .w270 {height:270px;}
+/* color */      .cl-bbbbbb {color:#bbbbbb;} .cl-000000 {color:#000000;} .cl-ff0000 {color:#ff0000;}
+/* background */ .bg-000000 {background:#000000;}
+/* text-align */ .bl {text-align:left;} .bc {text-align:center;} .br {text-align:right;}
+/* font */
+/* float */
+/* margin */      .mn0 {margin:0;}
+/* padding */
+/* border */      .br0 {border:0;} .brt5c {border-top:5px solid #4e0f20;}
+/* z-index */     .zi-01 {z-index:1;} .zi-02 {z-index:2;} .zi-03 {z-index:3;} .zi-04 {z-index:4;}
+/* corner */
+/* shadow */
+
+
+/* элементы структурных блоков */
+.ccl h2 {margin:-5px 0 10px 0;}
+.cc p {padding:20px;margin:0;}
+/*.cc img {background:#eeeeee;padding:2px;margin-left:30px;border:1px solid #ddd;}*/
+.ccc p {padding:5px 10px;margin:5px 0;line-height:18px;margin-left:20px;}
+.ccc code {/*padding:5px 10px;margin:5px 0;line-height:18px;margin-left:40px;*/}
+.cfl img {float:left;margin:10px 0 0 0px;}
+
+/* объекты со своими стилями */
+.xls {display:block;background:no-repeat url('/tms/concrete/gui/xls.png') 4px 8px;font:bold 11px Verdana, Arial, sans-serif;text-transform:uppercase;padding:18px 12px 18px 44px;}
+.pc {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pc.png') no-repeat 0 0px;padding:0 0 0 20px;margin:5px 0 -2px 0;} /* parfgraf city - слева бекграундом иконка в стиле Google Адреса */
+.pa {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pa.png') no-repeat 0 0px;padding:0 0 0 20px;margin:5px 0 -2px 0;} /* parfgraf adress - ?слева бекграундом иконка в стиле Google Адреса */
+.pk {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pk.png') no-repeat 0 0px;padding:0 0 0 20px;margin:5px 0 -2px 0;} /* parfgraf phone kievstar - слева бекграундом иконка kievstar */
+.pl {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pl.png') no-repeat 0 0px;padding:0 0 0 20px;margin:5px 0 -2px 0;} /* parfgraf phone life - слева бекграундом иконка life */
+.pm {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pm.png') no-repeat 0 0px;padding:0 0 0 20px;margin:5px 0 -2px 0;} /* parfgraf phone mts - слева бекграундом иконка mts */
+.pt {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pt.png') no-repeat 0 0px;padding:0 0 0 20px;margin:5px 0 -2px 0;} /* parfgraf parfgraf telephone stationary - слева бекграундом иконка телефона */
+.sk {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/skype-logo.png') no-repeat 0 2px;padding:0 0 0 20px;margin:0 0 0 0;} /* слева бекграундом иконка Skype */
+.po {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/po.png') no-repeat 5px center; }
+.pp {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/pe.png') no-repeat 5px center; }
+.ps {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/ps.png') no-repeat 5px center;}
+.pw {background: rgba(255, 255, 255, 0) url('/tms/concrete/gui/clock.png') no-repeat 5px center; }
+.ad {display:block;color:#333333;font-size:11px;text-align:right;margin:20px 10px 10px 10px;}
+.ad:before {display:block;clear:both;visibility:hidden;height:0;font-size:0;content: " ";}
+/* * html .ad {zoom:1;} */ /* for IE6 */  /* *:first-child+html .ad {zoom:1;} */ /* for IE7 */
+.gc {position:relative;display:block;float:left;margin:20px 20px 20px 20px;border:5px solid #ffffff;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);}
+.ad:hover {color:#555555;}
+.ad:hover {color:#555555;}
+.developer {color:#CCCCCC;font-size:11px;text-align:right;margin:20px 10px 10px 10px;}
+img.awards {background:#ffff00;margin:5px 0 0 20px;padding:0;border:none;}
+
+img.awards {background:#ffff00;margin:5px 0 0 20px;padding:0;border:none;}
+
+.aa-001 /*more - читать дальше - подробнее*/ 
+{position:relative;left:15px;display:block;float:none;width:100px;color:#ffffff;background:#4e0f20;margin-right:-50px;padding:0px;}
+/* border-radius структурных боков*/
+.aa-001 {-o-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.aa-001:hover {color:#ffffff;background:#3C3F3E;}
+
+/* разнести на параграфы ? */
+.address {float:left;color:#2e3841;background:no-repeat url('/tms/concrete/gui/address.png') left top;font:bold 12px Verdana, Arial, sans-serif;text-align:left;line-height:1.4;margin:87px 20px 0 -380px;padding-left:50px;}
+
+/* общие контейнеры для использования во всех структурных блоках */
+
+/* меню слева выпадающее или раскрывающееся */
+a.a0 {display:block;width:221px;color:#444444;/*background:no-repeat url('/tms/concrete/gui/a0.png') 0px center;*/font:normal 14px arsenalregular,Verdana,Arial,sans-serif;text-transform:uppercase;line-height:1.0;padding:2px 0 2px 5px;margin:8px 0 5px 8px;}
+a.a0:hover, .active>a {color:#C50006;/*background:#EE5E00;*/}
+a.a1 {display:block;width:211px;color:#444444;background:no-repeat url('/tms/concrete/gui/a1.png') 0px 3px;font:normal 12px arsenalregular,Verdana,Arial,sans-serif;text-transform:uppercase;line-height:1.0;padding:2px 0 2px 10px;margin:8px 0 3px 18px;}
+a.a1:hover, .active>a {color:#C50006;/*background:#EE5E00;*/}
+a.a2 {display:block;width:201px;color:#444444;background:no-repeat url('/tms/concrete/gui/a2.png') 0px center;font:normal 11px arsenalregular,Verdana,Arial,sans-serif;text-transform:uppercase;line-height:1.0;padding:2px 0 2px 10px;margin:8px 0 3px 28px;}
+a.a2:hover, .active>a {color:#C50006;/*background:#EE5E00;*/}
+/* меню в "cc" */
+.nv-cc {display:block;text-align:center;margin:0;padding:20px;}
+.nv-cc li {display:inline;list-style-type:disc;text-align:center;line-height:1.2;margin:0;padding:0;}
+.nv-cc li:before{content: " • ";color:#144e6b;}
+.nv-cc li a{color:#666666;font:normal 11px arsenalregular,Verdana,Arial,sans-serif;text-transform:uppercase;text-decoration:none;}
+.nv-cc li a:hover{color:#000000;}
+
+/* form */
+
+/* modal window 1 */
+.black_overlay {display:none;position:fixed;top:0%;left:0%;width:100%;height:100%;background-color:black;-moz-opacity:0.8;opacity:.80;/*filter:alpha(opacity=80);*/z-index:1000001;}
+.white_content {display:none;position:fixed;top:3%;left:50%;width:70%;height:85%;background-color:white;overflow:auto;text-align:center;padding:35px 2% 2% 2%;margin-left:-37%;z-index:1000002;}
+.white_content a img {background:white !important;padding:0px !important;border:none !important;}
+/* *html .white_content {position:absolute;} */ /* *html .black_overlay {position:absolute;} */
+a.krest {float:right;width:28px;height:28px;margin:-30px -2% 0 0;}
+.yo {position:relative;width:100%;height:100%;z-index:1000002;}
+
+/* modal window 2 работает везде, IE 9.0+, Chrome 1.0+,	Opera 9.6+,	Safari 3.0+, FF 1.0+, Android 1.0+, iOS 1.0+ */
+#modalb {display:none;position:fixed;bottom:0;left:0;right:0;top:0;background-color:rgba(0,0,0,0.8); opacity:0;/*pointer-events:none;*/-webkit-transition:opacity 400ms ease-in;-moz-transition:opacity 400ms ease-in;transition:opacity 400ms ease-in;}
+/* This is the trick */
+#modalb:target {display:block;background-color:#333;opacity:0.99;/*pointer-events:auto;*/z-index:200000;}
+#modalw {position:relative;height:88%;width:92%;background-color:#ffffff;margin:2% auto;padding:2%;opacity:1 !important; -webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);z-index:200001;}
+#close {position:absolute;right:-12px;top:-10px;width:24px;color:#ffffff;background-color:#444;text-align:center;font-weight:bold;line-height:25px;text-decoration:none;border:2px solid #999999; -webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;-moz-box-shadow:1px 1px 3px #000000;-webkit-box-shadow:1px 1px 3px #000000;box-shadow:1px 1px 3px #000000;}
+#close:hover {color:#ffffff;background-color:#000000;}
+
+/*table-characteristics*/
+.ta-ch .tr-ba{display:block;position:relative;float:left;width:400px;min-height:100px;background:#494949;text-align:center;margin:40px 20px 10px 130px;}
+.ta-ch tr td{vertical-align:middle;}
+.ta-ch caption{padding: 5px 0;}
+.ta-ch td{border: 1px solid #ffffff;}
+.ta-ch .tr-ba td{vertical-align:middle;}
+.ccc img {margin:0;padding:0;border:0;}
+ul li{list-style-type: none;}
+.ccc ul li::before{content: "• ";}
+.co-gallery{margin: 10px 5px 10px 35px;}
+a[rel="lightgallery[1]"] img{margin: 2px 1px 5px 1px;border: 1px solid transparent;border-radius: 8px;}
+a[rel="lightgallery[1]"] img:hover {transform: scale(1.05); border: 1px solid rgb(157, 157, 157);}
+.co-maim-img::after {content: "";display:block;clear:both;}
+
+/* 
+td.cell-img{width: 235px;position: relative;}
+td.cell-img img{position: absolute;top: 50px;left: 0;}
+ */
+td.cell-img{text-align: center;vertical-align: middle;}
+
+.co-fo {margin:0 auto;width:800px;}
+
+/* gallery */
+.img-tile {position:relative;float:left;/*width:237px;height:300px;*/background:#ffffff;border:solid 1px #eeeeee;margin:2px 0px 1px 3px;padding:10px;}
+.img-tile img {border:solid 2px #f2f2f2;}
+.img-tile img:hover {border:solid 2px #ff0000;}
+/* hits */
+.it-tile {position:relative;float:left;width:237px;height:300px;/*background:#F3F7FA no-repeat url('/tms/concrete/gui/it-02.png') center top;*/border:solid 1px #eeeeee;margin:2px 0px 1px 2px;padding:2px;}
+.it-tile img {width:216px;height:216px;margin:12px 9px 3px 9px;/*padding:2px;*/border:solid 2px #f2f2f2;}
+.it-tile img:hover {border:solid 2px #ff0000;}
+.ita-01 {display:block;width:208px;height:27px;color:#444444;font:bold 12px verdana,Arial,sans-serif;text-transform:uppercase;line-height:1.4;margin:0 8px 0 8px;padding:7px 0 8px 0;}
+.ita-01 {
+    overflow:hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow:ellipsis; /* Добавляем многоточие */
+}
+p.itp-00 {position:absolute;/*width:188px;*/right:14px;background:#ffffff;text-align:right;margin-top:-40px;border:1px solid #eee;z-index:8;}
+p.itp-01 {display:block;float:left;width:208px;height:12px;font:normal 12px verdana,Arial,sans-serif;margin:5px 0 0 5px;padding:7px 0 5px 5px;}
+/*
+.itp-01 {display:block;float:right;width:80px;height:12px;color:#ffffff;background:#EE5E00;font:bold 11px verdana,Arial,sans-serif;text-transform:uppercase;margin:5px 10px 0 0;padding:7px 10px 9px 10px;}
+*/
+.itp-01{border:2px solid #9C463C;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;}
+.itp-01:hover {display:block;float:right;width:80px;height:12px;color:#ffff00;background:#ff0000;font:bold 11px verdana,Arial,sans-serif;text-transform:uppercase;margin:5px 10px 0 0;padding:7px 10px 9px 10px;}
+.itp-01:hover{border:2px solid #ffff00;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;}
+
+.it-page-img {position:absolute;top:0;left:0;width:400px;height:400px;padding:0px;z-index:8;}
+.it-page-img img {width:400px;height:400px;background:#f8f8f8;padding:5px;margin:5px;border:solid #ddd 1px;}
+.it-page-txt {position:relative;top:0;/*left:280px;*/ min-height:400px;min-width:250px;/*background:no-repeat url('/tms/concrete/gui/ccc.png') right bottom*/;font-size:14px;margin:0 0 0 425px;padding:10px 0 30px 0;}
+.it-page-txt h2 {position:relative;background:none;margin:0 0 0px 30px;padding:10px 0 10px 0;}
+.it-page-txt p {position:relative;background:none;margin:0 0 0 30px;padding:10px 0 10px 0;}
+p.it-tile-price {width:180px;height:20px;background:#ffffff;font-size:16px;text-align:left;margin:10px 10px 10px 30px;padding:5px 5px 5px 10px;border:1px solid #eee;}
+
+/*brands*/
+.brands{float:left;width:168px;height:168px;border:solid 2px #ffffff;margin:10px;padding:2px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);}
+.brands img{width:100%;height:100%;/*box-shadow: 4px 5px 10px rgba(167, 173, 176, 0.17)*/ margin:0px; padding: 0px}
+.brands:hover {border:solid 2px #ff0000;}
+
+/*videos*/
+.vi{display:inline-block;margin-left:2.5%;}
+
+/*prices*/
+.prices{float: left;margin:0px 0px 20px 20px; width: 120px;height: 170px; vertical-align: middle; background: url('/tms/concrete/gui/xls.png') top right no-repeat; padding: 10px; border: 2px solid #DDDDDD;	box-shadow:2px 2px 15px rgba(204, 214, 242, 0.48);}
+.prices img{float:left; margin: 0px; border-bottom: 1px dotted #666666;}
+.prices:hover{border: solid 2px #ff0000;box-shadow: 1px 1px 15px rgba(50, 85, 184, 0.78);}
+.prices a {color:#086097;}
+.prices a:hover{color:#CC0000;}
+
+/*table electro-panel*/
+.ta-electro {font-size:11px;margin:5px 10px 16px 20px;border:2px solid #DDDDDD;}
+.ta-electro tr{border-bottom:2px solid #DDDDDD; }
+.ta-electro td{padding: 1px 1px;border-left: 2px solid #DDDDDD;}
+
+.it-250-01 {float:left;width:250px;font-size:12px;text-align:left;margin:0px;padding:0px 0px 15px 0px;}
+.it-250-01 h2 {background:none;font-weight:bold;font-size:15px;padding:0 0 0 10px;margin:10px 0px 0px 4px;}
+.it-250-01 p {padding:5px 15px;margin:0px 0px 0px 0px;}
+.it-250-01 img {background:#eeeeee;padding:4px;margin:4px 4px 4px 15px;border:1px solid #ddd;}
+.it-250-01 a {display:block;padding:5px 15px;margin:0px 0px 0px 0px;}
+
+/* ---------- Menu Mega --------- */
+#mm {position:absolute;left:0px;top:0;height:54px;width:1000px;list-style:none;margin:-20px -1px 0 0;padding:0;}
+
+#mm a {position:relative;display:block;color:#222222;outline:0;line-height:4.5em;}
+#mm li {position:relative;float:left;height:54px;text-align:center;text-transform:uppercase;font-size:11px;margin-left:-1px;padding:0;border:1px solid transparent;z-index:10;}
+#mm li:hover {color:#ffffff;background:#81868b;margin-top:0px;/*border:1px solid #000;*/border:1px solid transparent;}
+#mm li:hover a {color:#ffffff;background:#81868b;}
+
+/* ---------- Menu Mega Within Div Styles --------- */
+#mm div h2 {position:relative;clear:both;float:left;width:97%;background:#ddd;font-size:1em;padding:0 1%;margin:10px 0 5px 0;}
+#mm div h3 {clear:both;color:#555555;font:normal 20px verdana,Arial,sans-serif;text-align:left;padding:7px 10px 7px 0px;margin:-5px 0 0px 0;}
+#mm div h4 {clear:both;color:#ddd;font:18px lighter verdana,arial,sans-serif;text-align:left;padding:7px 10px 7px 0px;}
+#mm div h5 {float:left;width:265px;background:#1A3100;font:normal 11px Arial, Helvetica, sans-serif;line-height:1;padding:5px 5px;margin:3px;}
+#mm div h6 {float:left;width:265px;background:#1A3100;font:normal 11px Arial, Helvetica, sans-serif;line-height:1;padding:5px 5px;margin:3px;}
+#mm div p {position:relative;float:left;background:transparent;font-size:11px;padding:5px 0;margin-right:6px;}
+
+#mm div p a {background:no-repeat url('/tms/concrete/gui/a.gif') 0 -4px;line-height:1.2;padding:4px 0 2px 10px;}
+#mm div a {font-size:11px;color:#bbb;}
+#mm div a:hover, #mm div a:focus, #mm div a:active {color:#FFCC00;background:no-repeat url('/tms/concrete/gui/a.gif') 0 -54px;}
+#mm span {display:block;color:#ffffff;background:#323829;font-weight:bold;padding:3px 5px 1px 10px;margin-top:6px;margin-bottom:3px;}
+
+/*верх */
+/* заголовочные пункты меню(a#hh...) - высота одинаковая, а ширина разная*/
+a#hh1, a#hh2, a#hh3, a#hh4, a#hh5, a#hh6, a#hh7, a#hh8 {display:block;height:54px;color:#222222;background:#dddddd no-repeat url('/tms/concrete/gui/bg-nv-mm-06.jpg') 0 0;margin:0;}
+a#hh1:hover, a#hh2:hover, a#hh3:hover, a#hh4:hover, a#hh5:hover, a#hh6:hover, a#hh7:hover, a#hh8:hover {color:#ffffff;background:#81868b;}
+a#hh1{width:130px;} a#hh2{width:170px;} a#hh3{width:140px;} a#hh4{width:140px;} a#hh5{width:140px;} a#hh6{width:142px;} a#hh7{width:131px;} a#hh8{width:131px;}
+
+#mm li.lh1, #mm li.lh2, #mm li.lh3, #mm li.lh4, #mm li.lh5, #mm li.lh6, #mm li.lh7, #mm li.lh8 {font:bold 12px Verdana,Arial,sans-serif;}
+
+#mm div u {display:block;color:#000;line-height:1.2;padding:4px 0 2px 15px;} 
+#mm div u.life {background:no-repeat url('/tms/concrete/gui/a.gif') 0 -704px;} #mm div u.kiev {background:no-repeat url('/tms/concrete/gui/a.gif') 0 -754px;} #mm div u.mts {background:no-repeat url('/tms/concrete/gui/a.gif') 0 -804px;} #mm div u.tel  {background:no-repeat url('/tms/concrete/gui/a.gif') 0 -854px;}
+#mm div .goods {position:relative;clear:both;background:none;padding:10px 10px 20px 10px;/*под bg  с тенями*/margin:0;border:0;}
+#mm div .goods img{border:0;}
+#mm div .goods a{display:block;float:left;color:#eee;background:none;width:180px;text-align:center;line-height:1.9;padding:5px 2px;margin:0;border:1px solid #eee;}
+#mm div .goods a:hover {color:#C78D27/*FFCC00*/;background:#20211e;background-image:none;}
+#mm div a.a3 {position:static;clear:both;display:block;color:#222222;background:no-repeat url('/tms/concrete/gui/a3.png') left center;
+font:bold 12px Verdana,Arial,sans-serif;line-height:1;
+   text-align:left;text-transform:uppercase;line-height:1.1;padding:3px 0 3px 15px;}
+#mm div a.a3:hover {color:#C50006;}
+#mm div a.a4 {position:static;clear:both;display:block;color:#222222;background:no-repeat url('/tms/concrete/gui/a4.png') left center;
+font:normal 11px Verdana,Arial,sans-serif;line-height:1;
+   text-align:left;text-transform:uppercase;line-height:1.1;padding:3px 0 3px 20px;}
+#mm div a.a4:hover {color:#C50006;}
+div#zz1 a, div#zz2 a, div#zz3 a, div#zz4 a, div#zz5 a, div#zz6 a {position:static;}
+div#zz1 a img, div#zz2 a img, div#zz3 a img, div#zz4 a img, div#zz5 a img, div#zz6 a img {display:none;position:absolute;top:5px;left:-299px;height:0;width:0;border-width:0;}
+div#zz1 a:hover img, div#zz2 a:hover img, div#zz3 a:hover img, div#zz4 a:hover img, div#zz5 a:hover img, div#zz6 a:hover img {display:block;float:left;top:5px;left:-299px;height:400px;width:250px;background:#252f3a;padding:5px;border:solid 1px #2387C7;}
+
+/* ---------- Menu Mega Hide/Show Div ---------- */
+#mm div.mp01 {height:540px;} #mm div.mp02 {height:220px;margin-left:-131px;} #mm div.mp03 {height:520px;margin-left:-302px;} #mm div.mp04 {height:210px;margin-left:-443px;} div.mp05 {height:285px;margin-left:-245px;} div.mp06 {height:210px;margin-left:-386px;} 
+#mm li div {position:absolute;display:none;left:0;width:651px;background:#f4f3f3;text-align:left;
+font-weight:normal;margin-top:6px;padding:20px 0 20px 10px;border:1px solid #f4f3f3;}
+#mm li:hover div {display:block;left:-1px;top:48px;}
+#mm div div.frs {position:absolute;top:0;left:0;width:386px;min-height:200px;margin:0 0 0 245px;padding:10px 0 0 30px;border:none;}
+#mm img.fls {position:absolute;top:0;left:0;width:200px;height:200px;background:#ffffff;margin:5px 0 0 20px;padding:5px;border:solid 1px #dddddd;}
+#mm div div.frs span {font-size:12px;float:left;background:no-repeat url('/tms/concrete/gui/a.gif') right -502px;padding:0 15px 0 0;margin:0;}
+#mm li div {opacity:0;transition:all .65s;}
+#mm li:hover div {opacity:0.98;}
+
+/* border-radius mm */
+/*
+#mm div.mp01, #mm div.mp02, #mm div.mp03, #mm div.mp04, div.mp05, div.mp06
+ {-o-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+*/
+
+/* setup the responsive size of the container */
+/* set the max-width to the actual width of the images and the width to the size when the browser width is less than the max-width */
+/* margin:0 auto; centers the slideshow */
+.slideshow {position:relative;width:100%;max-width:1000px;height:417px;background:no-repeat url('/img/fla/1000x305-01/1.jpg') center center;overflow:hidden;margin:0 auto;border:none;}
+/* position the images and make them 100% width, display:block is used to remove the bottom padding that some browsers add to the images */
+.slideshow div {position:absolute;display:block;top:0;left:-100%;width:100%;max-width:1000px;height:417px;}
+/* make the first image position:relative; to set the responsive height of the slideshow */
+.slideshow div:first-child {position:relative;} 
+/* the animation for each slide */
+/* each slide is shown for 6 seconds and the total time for the 8 slides is 48 seconds with each slide delayed 6 seconds after the previous slide */
+/* we need two animations for each image, one for Chrome, Safari and Opera, and the other for Firefox and Internet Explorer */
+.slideshow div:nth-of-type(1) {-webkit-animation:autoplay 36s linear infinite 0s;  animation:autoplay 36s linear infinite 0s;} 
+.slideshow div:nth-of-type(2) {-webkit-animation:autoplay 36s linear infinite 6s;  animation:autoplay 36s linear infinite 6s;}
+.slideshow div:nth-of-type(3) {-webkit-animation:autoplay 36s linear infinite 12s; animation:autoplay 36s linear infinite 12s;}
+.slideshow div:nth-of-type(4) {-webkit-animation:autoplay 36s linear infinite 18s; animation:autoplay 36s linear infinite 18s;}
+.slideshow div:nth-of-type(5) {-webkit-animation:autoplay 36s linear infinite 24s; animation:autoplay 36s linear infinite 24s;}
+.slideshow div:nth-of-type(6) {-webkit-animation:autoplay 36s linear infinite 30s; animation:autoplay 36s linear infinite 30s;}
+/*
+.slideshow div:nth-of-type(7) {-webkit-animation:autoplay 48s linear infinite 36s; animation:autoplay 48s linear infinite 36s;}
+.slideshow div:nth-of-type(8) {-webkit-animation:autoplay 48s linear infinite 42s; animation:autoplay 48s linear infinite 42s;}
+*/
+/* animation keyframes one for Firefox and Internet Explorer, the other for Chrome, Safari and Opera */
+/* the show time for each slide is 100/8 = 12.5% of the total time */
+/* the slide in time is 1% and the slide out time is 12.5% + 1% = 13.5%/
+/* you can adjust the slide in and out time to make it faster or slower */
+@keyframes autoplay {
+0% {left:-100%;}
+1%, 16.66% {left:0;}
+17.66%, 100% {left:100%;}
+}
+@-webkit-keyframes autoplay {
+0% {left:-100%;}
+1%, 16.66% {left:0;}
+17.66%, 100% {left:100%;}
+}
